@@ -13,7 +13,7 @@ class ToDo(db.Model):
         return {
             "id": self.id,
             "description": self.description,
-            "created_at": self.created_at.isoformat()
+            "created_at": self.created_at.strftime("%d-%m-%Y %H:%M:%S")
         }
 
 
@@ -28,5 +28,5 @@ class User(db.Model):
             "id": self.id,
             "telegram_id": self.telegram_id,
             "group": self.group,
-            "created_at": self.created_at.isoformat()
+            "created_at": self.created_at.strftime("%d-%m-%Y %H:%M:%S")
         }
